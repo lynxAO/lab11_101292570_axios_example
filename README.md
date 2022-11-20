@@ -1,3 +1,45 @@
+Lab Description:
+-------------------------------------------
+COMP 3123 – Full Stack Development – I
+
+Lab11 - Working with Axios and Fetch API
+
+1.	create react app and GitHub repository having name lab11_StudentID_axios_example
+
+2.	Install required packages using following command
+
+	npm install --save axios
+	npm install --save react-bootstrap bootstrap
+
+3.	Create the PersonList components to fetch data using axios. 
+Paste following code inside the PersonList component to fetch data from given API. Below is the reference code
+
+//Define state default values
+    state = {
+        persons: []
+    }
+
+     //Component Lifecycle Callback
+    componentDidMount() {
+        axios.get(`https://randomuser.me/api/?results=10`)
+        .then(res => {
+            console.log(res.data);
+            const persons = res.data.results;
+            this.setState({ persons });
+        })
+    }
+
+4.	Try to get data using JS fetch or axios API
+
+5.	Upload zip file, screenshot of output and GitHub link on BB.
+
+
+ 
+Output format
+
+ 
+
+-------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +110,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
